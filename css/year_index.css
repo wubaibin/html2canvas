@@ -1,0 +1,838 @@
+/*1、通用 CSS ：大部分元素具备的样式*/
+body{
+    font:12px "microsoft yahei",Arial,Helvetica,sans-serif;
+    color:#000304;
+    margin:0;
+    background-color: #ffffff;
+}
+p,h1,h2,h3,h4,h5,h6,ul,ol,dl,dd{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+img{
+    vertical-align:middle;
+}
+a{
+    color:#000304;
+    text-decoration:none;
+}
+a:hover{
+    text-decoration:none;
+}
+a:focus{
+    text-decoration:none;
+}
+.lf{float:left;}
+.rt{float:right;}
+.clear:after{
+    content: ' ';
+    display: table;
+    clear: both;
+}
+.clear{
+    clear: both;
+}
+/*@font-face {*/
+    /*font-family: myFirstFont;*/
+    /*src: url('../font/腾祥金砖黑简.ttf');*/
+/*}*/
+.mid{
+    width: 600px;
+}
+/*======================================*/
+.outsideRed{
+    width: 100%;
+    height: 1350px;
+    background-color: #b60606;
+    overflow: hidden;
+}
+.middleWhite{
+    width: 97%;
+    height: 1315px;
+    background-color: #fff;
+    margin: 15px auto 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.insideRed{
+    width: 94%;
+    height: 1265px;
+    background-color: #b60606;
+    margin: 25px auto;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+/*===========title===============*/
+.title{
+    width: 100%;
+    height: 140px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.title_text{
+    font-size: 118px;
+    color: #fef7dd;
+    text-shadow: 5px 8px 5px #d36a67;
+    margin-left: 25px;
+    clear: both;
+    /*font-family: myFirstFont;*/
+    font-weight: bold;
+    margin-top: -19px;
+}
+.title_text>span{
+    display: block;
+    float: left;
+}
+.title_text>.chang{
+    margin-right: 8px;
+    margin-top: 10px;
+    transform:rotate(-8deg);
+}
+.title_text>.zhou{
+    margin-right: 8px;
+    margin-top: -5px;
+    transform:rotate(-5deg);
+}
+.title_text>.nian{
+    margin-right: 8px;
+    margin-top: -5px;
+    transform:rotate(5deg);
+}
+.title_text>.wei{
+    margin-top: 10px;
+    transform:rotate(8deg);
+}
+.title_img{
+    width: 140px;
+    height: 140px;
+    margin-right: 12px;
+}
+/*=======过年了，吃团圆饭====*/
+.eat_container{
+    width: 665px;
+    height: 116px;
+    margin: 25px auto 15px auto;
+}
+.eat{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/*===========上传图片=============*/
+.uploadingPic{
+    margin: 0 auto;
+    height: 404px;
+    position: relative;
+    overflow: hidden;
+}
+.uploadingPic_bg{
+    width: 100%;
+    /*height: 100%;*/
+}
+.upload_container{
+    height: 404px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.upload_add{
+    margin-top: 150px;
+    height: 35px;
+    line-height: 25px;
+    font-size: 60px;
+    text-align: center;
+    color: #fad2cc;
+}
+.upload_img{
+    font-size: 19px;
+    margin-top: 10px;
+    text-align: center;
+    color: #fad2cc;
+}
+#file{
+    display: block;
+    width: 100%;
+    height:100%;
+    border: 0;
+    padding: 0;
+    outline: none;
+    opacity: 0;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 100;
+}
+/*===========新年愿望：请输入您的新年愿望===========*/
+.wish_container{
+    height: 40px;
+    line-height: 40px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+}
+.wish_left{
+    display: block;
+    width: 24px;
+    height: 22px;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.wish_content{
+    height: 40px;
+    font-size: 24px;
+    color: #fff;
+    letter-spacing: 1px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 0 30px;
+    text-align: center;
+    overflow: hidden;
+}
+.wish_content>span{
+    height: 39px;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #fff;
+}
+.wish_right{
+    display: block;
+    width: 24px;
+    height: 22px;
+    position: absolute;
+    top:0;
+    right: 0;
+}
+/*==========年货大街===========*/
+.stocking_container{
+    height: 400px;
+    margin: 0 auto;
+}
+.stocking_img{
+    width: 100%;
+    height:100%;
+}
+/*===========扫一扫二维码，说出你的心愿=========*/
+.sayWish{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    margin: 10px auto 0 auto;
+}
+/*================模态框============*/
+.modal_container{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100000;
+    background-color: rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+.modal_content{
+    width: 490px;
+    /*height:290px;*/
+    margin: 55% auto;
+    background-color: #fef7dd;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.close{
+    width: 25px;
+    height: 25px;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #aa2020;
+    border: 1px solid #aa2020;
+    position: absolute;
+    top: 8px;
+    right: 12px;
+}
+.modal_importantContent{
+    width: 85%;
+    margin: 25px auto 0 auto;
+}
+.newYearWish,
+.phoneNumber{
+    font-size: 24px;
+    color: #aa2020;
+}
+.newYearWish_container{
+    width: 100%;
+    height: 70px;
+    margin-top: 5px;
+    border: 1px solid #aa2020;
+    overflow: hidden;
+}
+.newYearWish_container>input{
+    width: 100%;
+    height:60%;
+    border: 0;
+    padding: 0;
+    margin-top: 1px;
+    text-indent: 10px;
+    font-size: 18px;
+    outline: none;
+    color: #aa2020;
+    background-color: #fef7dd;
+}
+.newYearWish_container>p{
+    font-size: 15px;
+    color: #aa2020;
+    text-align: end ;
+}
+.phoneNumber{
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+.phoneNumber_container{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #aa2020;
+}
+.phoneNumber_container>input{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    padding: 0;
+    outline: none;
+    text-indent: 10px;
+    font-size: 18px;
+    color: #aa2020;
+    background-color: #fef7dd;
+}
+.err{
+    font-size: 15px;
+    color: #aa2020;
+    padding-top: 5px;
+}
+.buttonSubmit{
+    display: block;
+    width: 105px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border: none;
+    outline: none;
+    padding: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #aa2020;
+    background-color: #fef7dd;
+    margin: 30px auto 15px auto;
+}
+@media screen and (min-width: 400px) and (max-width:767px){
+    .mid{
+        width: 320px;
+    }
+    /*======================================*/
+    .outsideRed{
+        height: 755px;
+    }
+    .middleWhite{
+        width: 97%;
+        height: 735px;
+        margin: 10px auto 0 auto;
+    }
+    .insideRed{
+        width: 94%;
+        height: 705px;
+        margin: 15px auto;
+    }
+    /*===========title===============*/
+    .title{
+        height: 75px;
+        margin-top: 12px;
+    }
+    .title_text{
+        font-size: 64px;
+        margin-left: 12px;
+        margin-top: -10px;
+        text-shadow: 3px 5px 3px #d36a67;
+    }
+    .title_text>.chang{
+        margin-right: 4px;
+        margin-top: 5px;
+        transform:rotate(-6deg);
+    }
+    .title_text>.zhou{
+        margin-right: 4px;
+        margin-top: -3px;
+        transform:rotate(-4deg);
+    }
+    .title_text>.nian{
+        margin-right: 4px;
+        margin-top: -3px;
+        transform:rotate(4deg);
+    }
+    .title_text>.wei{
+        margin-top: 5px;
+        transform:rotate(6deg);
+    }
+    .title_img{
+        width: 75px;
+        height: 75px;
+        margin-right: 8px;
+    }
+    /*=======过年了，吃团圆饭====*/
+    .eat_container{
+        width: 358px;
+        height: 62px;
+        margin: 18px auto 10px auto;
+    }
+    /*===========上传图片=============*/
+    .uploadingPic{
+        height: 215px;
+    }
+    .upload_container{
+        height: 215px;
+    }
+    .upload_add{
+        margin-top: 75px;
+        height: 35px;
+        line-height: 25px;
+        font-size: 40px;
+    }
+    .upload_img{
+        font-size: 16px;
+        margin-top: 0px;
+    }
+    /*===========新年愿望：请输入您的新年愿望===========*/
+    .wish_container{
+        height: 30px;
+        line-height: 30px;
+        margin: 15px auto;
+    }
+    .wish_left{
+        width: 12px;
+        height: 11px;
+    }
+    .wish_content{
+        height: 30px;
+        font-size: 16px;
+        padding: 0 15px;
+    }
+    .wish_content>span{
+         height: 29px;
+    }
+    .wish_right{
+        width: 12px;
+        height: 11px;
+    }
+    /*==========年货大街===========*/
+    .stocking_container{
+        height: 215px;
+    }
+    /*===========扫一扫二维码，说出你的心愿=========*/
+    .sayWish{
+        height: 30px;
+        line-height: 30px;
+        font-size: 16px;
+        margin: 3px auto 0 auto;
+    }
+    /*================模态框============*/
+    .modal_content{
+        width: 270px;
+        margin: 55% auto;
+        border-radius: 15px;
+    }
+    .close{
+        width: 15px;
+        height: 15px;
+        line-height: 14px;
+        border-radius: 50%;
+        font-size: 16px;
+        top: 8px;
+        right: 12px;
+    }
+    .modal_importantContent{
+        width: 85%;
+        margin: 15px auto 0 auto;
+    }
+    .newYearWish,
+    .phoneNumber{
+        font-size: 16px;
+    }
+    .newYearWish_container{
+        height: 45px;
+        margin-top: 5px;
+    }
+    .newYearWish_container>input{
+        height:60%;
+        margin-top: 1px;
+        text-indent: 5px;
+        font-size: 14px;
+    }
+    .newYearWish_container>p{
+        font-size: 12px;
+    }
+    .phoneNumber{
+        margin-top: 8px;
+        margin-bottom: 5px;
+    }
+    .phoneNumber_container{
+        height: 30px;
+    }
+    .phoneNumber_container>input{
+        text-indent: 5px;
+        font-size: 14px;
+    }
+    .err{
+        font-size: 13px;
+        padding-top: 3px;
+    }
+    .buttonSubmit{
+        width: 85px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 16px;
+        margin: 10px auto 5px auto;
+    }
+}
+@media screen and (min-width: 321px) and (max-width:401px){
+    .mid{
+        width: 300px;
+    }
+    /*======================================*/
+    .outsideRed{
+        height: 710px;
+    }
+    .middleWhite{
+        width: 97%;
+        height: 691px;
+        margin: 10px auto 0 auto;
+    }
+    .insideRed{
+        width: 94%;
+        height: 665px;
+        margin: 13px auto;
+    }
+    /*===========title===============*/
+    .title{
+        height: 70px;
+        margin-top: 10px;
+    }
+    .title_text{
+        font-size: 57px;
+        margin-left: 10px;
+        margin-top: -10px;
+        text-shadow: 3px 5px 3px #d36a67;
+    }
+    .title_text>.chang{
+        margin-right: 4px;
+        margin-top: 5px;
+        transform:rotate(-6deg);
+    }
+    .title_text>.zhou{
+        margin-right: 4px;
+        margin-top: -3px;
+        transform:rotate(-4deg);
+    }
+    .title_text>.nian{
+        margin-right: 4px;
+        margin-top: -3px;
+        transform:rotate(4deg);
+    }
+    .title_text>.wei{
+        margin-top: 5px;
+        transform:rotate(6deg);
+    }
+    .title_img{
+        width: 70px;
+        height: 70px;
+        margin-right: 8px;
+    }
+    /*=======过年了，吃团圆饭====*/
+    .eat_container{
+        width: 333px;
+        height:58px;
+        margin: 18px auto 10px auto;
+    }
+    /*===========上传图片=============*/
+    .uploadingPic{
+        height: 202px;
+    }
+    .upload_container{
+        height: 202px;
+    }
+    .upload_add{
+        margin-top: 75px;
+        height: 30px;
+        line-height: 20px;
+        font-size:35px;
+    }
+    .upload_img{
+        font-size: 15px;
+        margin-top: 0px;
+    }
+    /*===========新年愿望：请输入您的新年愿望===========*/
+    .wish_container{
+        height: 30px;
+        line-height: 30px;
+        margin: 12px auto;
+    }
+    .wish_left{
+        width: 12px;
+        height: 11px;
+    }
+    .wish_content{
+        height: 30px;
+        font-size: 16px;
+        padding: 0 15px;
+    }
+    .wish_content>span{
+        height: 29px;
+    }
+    .wish_right{
+        width: 12px;
+        height: 11px;
+    }
+    /*==========年货大街===========*/
+    .stocking_container{
+        height: 200px;
+    }
+    /*===========扫一扫二维码，说出你的心愿=========*/
+    .sayWish{
+        height: 30px;
+        line-height: 30px;
+        font-size: 16px;
+        margin: 3px auto 0 auto;
+    }
+    /*================模态框============*/
+    .modal_content{
+        width: 260px;
+        margin: 55% auto;
+        border-radius: 15px;
+    }
+    .close{
+        width: 15px;
+        height: 15px;
+        line-height: 13px;
+        border-radius: 50%;
+        font-size: 15px;
+        top: 8px;
+        right: 12px;
+    }
+    .modal_importantContent{
+        width: 85%;
+        margin: 15px auto 0 auto;
+    }
+    .newYearWish,
+    .phoneNumber{
+        font-size: 15px;
+    }
+    .newYearWish_container{
+        height: 45px;
+        margin-top: 5px;
+    }
+    .newYearWish_container>input{
+        height:60%;
+        margin-top: 1px;
+        text-indent: 5px;
+        font-size: 14px;
+    }
+    .newYearWish_container>p{
+        font-size: 12px;
+    }
+    .phoneNumber{
+        margin-top: 8px;
+        margin-bottom: 5px;
+    }
+    .phoneNumber_container{
+        height: 30px;
+    }
+    .phoneNumber_container>input{
+        text-indent: 5px;
+        font-size: 14px;
+    }
+    .err{
+        font-size: 12px;
+        padding-top: 3px;
+    }
+    .buttonSubmit{
+        width: 80px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 15px;
+        margin: 15px auto 5px auto;
+    }
+}
+@media screen and (max-width:320px){
+    .mid{
+        width: 250px;
+    }
+    /*======================================*/
+    .outsideRed{
+        height: 590px;
+    }
+    .middleWhite{
+        width: 97%;
+        height: 575px;
+        margin: 6px auto 0 auto;
+    }
+    .insideRed{
+        width: 94%;
+        height: 555px;
+        margin: 10px auto;
+    }
+    /*===========title===============*/
+    .title{
+        height: 58px;
+        margin-top: 10px;
+    }
+    .title_text{
+        font-size: 50px;
+        margin-left: 10px;
+        margin-top: -10px;
+        text-shadow: 2px 4px 2px #d36a67;
+    }
+    .title_text>.chang{
+        margin-right: 2px;
+        margin-top: 3px;
+        transform:rotate(-6deg);
+    }
+    .title_text>.zhou{
+        margin-right: 2px;
+        margin-top: -1px;
+        transform:rotate(-4deg);
+    }
+    .title_text>.nian{
+        margin-right: 2px;
+        margin-top: -1px;
+        transform:rotate(4deg);
+    }
+    .title_text>.wei{
+        margin-top: 3px;
+        transform:rotate(6deg);
+    }
+    .title_img{
+        width: 58px;
+        height: 58px;
+        margin-right: 8px;
+    }
+    /*=======过年了，吃团圆饭====*/
+    .eat_container{
+        width: 277px;
+        height:48px;
+        margin: 15px auto 10px auto;
+    }
+    /*===========上传图片=============*/
+    .uploadingPic{
+        height: 168px;
+    }
+    .upload_container{
+        height: 202px;
+    }
+    .upload_add{
+        margin-top: 65px;
+        height: 20px;
+        line-height: 15px;
+        font-size:25px;
+    }
+    .upload_img{
+        font-size: 14px;
+        margin-top: 0px;
+    }
+    /*===========新年愿望：请输入您的新年愿望===========*/
+    .wish_container{
+        height: 25px;
+        line-height: 25px;
+        margin: 10px auto;
+    }
+    .wish_left{
+        width: 10px;
+        height: 9px;
+    }
+    .wish_content{
+        height: 25px;
+        font-size: 14px;
+        padding: 0 15px;
+    }
+    .wish_content>span{
+        height: 24px;
+    }
+    .wish_right{
+        width: 10px;
+        height:9px;
+    }
+    /*==========年货大街===========*/
+    .stocking_container{
+        height: 166px;
+    }
+    /*===========扫一扫二维码，说出你的心愿=========*/
+    .sayWish{
+        height: 25px;
+        line-height: 25px;
+        font-size: 14px;
+        margin: 3px auto 0 auto;
+    }
+    /*================模态框============*/
+    .modal_content{
+        width: 210px;
+        margin: 53% auto;
+        border-radius: 15px;
+    }
+    .close{
+        width: 15px;
+        height: 15px;
+        line-height: 13px;
+        border-radius: 50%;
+        font-size: 15px;
+        top: 6px;
+        right: 8px;
+    }
+    .modal_importantContent{
+        width: 85%;
+        margin: 10px auto 0 auto;
+    }
+    .newYearWish,
+    .phoneNumber{
+        font-size: 14px;
+    }
+    .newYearWish_container{
+        height: 45px;
+        margin-top: 3px;
+    }
+    .newYearWish_container>input{
+        height:60%;
+        margin-top: 1px;
+        text-indent: 5px;
+        font-size: 14px;
+    }
+    .newYearWish_container>p{
+        font-size: 12px;
+    }
+    .phoneNumber{
+        margin-top: 5px;
+        margin-bottom: 3px;
+    }
+    .phoneNumber_container{
+        height: 25px;
+    }
+    .phoneNumber_container>input{
+        text-indent: 5px;
+        font-size: 14px;
+    }
+    .err{
+        font-size: 12px;
+        padding-top: 2px;
+    }
+    .buttonSubmit{
+        width: 80px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 14px;
+        margin: 8px auto 5px auto;
+    }
+}

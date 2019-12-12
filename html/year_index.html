@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>常州年味</title>
+    <link rel="stylesheet" href="../css/year_index.css">
+</head>
+<body>
+    <section id="html2canvas">
+        <!--最外面的红色-->
+        <div class="outsideRed">
+            <!--中间的白色-->
+            <div class="middleWhite">
+                <!--里面的红色-->
+                <div class="insideRed">
+                    <!--常州年味 二维码-->
+                    <div class="title clear">
+                        <div class="title_text lf">
+                            <span class="chang">常</span>
+                            <span class="zhou">州</span>
+                            <span class="nian">年</span>
+                            <span class="wei">味</span>
+                        </div>
+                        <!--二维码-->
+                        <img src="../img/erWeiMa.jpg" class="title_img rt" alt="">
+                    </div>
+                    <!--过年了，吃团圆饭-->
+                    <div class="eat_container">
+                        <img src="../img/year.png" class="eat" alt="">
+                    </div>
+                    <!--上传图片-->
+                    <div class="uploadingPic mid">
+                        <!--一张背景图-->
+                        <img src="../img/bg.png" class="uploadingPic_bg" alt="">
+                        <input type="file" name="file" id="file" value="" accept="image/*" multiple="">
+                        <!--点击上传图片-->
+                        <div class="upload_container mid">
+                            <p class="upload_add">+</p>
+                            <p class="upload_img">点击上传图片</p>
+                        </div>
+                    </div>
+                    <!--新年愿望：请输入您的新年愿望-->
+                    <div class="wish_container mid">
+                        <img src="../img/wishLeft.png" class="wish_left" alt="">
+                        <div class="wish_content lf">新年愿望：<span>请输入您的新年愿望</span></div>
+                        <img src="../img/wishRight.png"  class="wish_right" alt="">
+                    </div>
+                    <!--年货大街-->
+                    <div class="stocking_container mid">
+                        <img src="../img/stocking.jpg" class="stocking_img" alt="">
+                    </div>
+                    <!--扫一扫二维码，说出你的心愿-->
+                    <div class="sayWish mid">扫一扫二维码，说出你的心愿</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--模态框-->
+    <div class="modal_container" style="display: none">
+        <div class="modal_content">
+            <div class="close">×</div>
+            <div class="modal_importantContent">
+                <p class="newYearWish">新年愿望：</p>
+                <div class="newYearWish_container">
+                    <input type="text" placeholder="" maxlength="16">
+                    <p>（16个字符）</p>
+                </div>
+                <p class="err wish_err" style="display: none">新年愿望不能为空</p>
+                <p class="phoneNumber">请输入手机号：</p>
+                <div class="phoneNumber_container">
+                    <input type="number" placeholder="">
+                </div>
+                <p class="err phoneNumber_err" style="display: none">请输入正确的手机号</p>
+                <button type="submit" class="buttonSubmit">确认提交</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-1.7.2.min.js"></script>
+    <script src="../js/html2canvas.min.js"></script>
+    <script src="../js/year_index.js"></script>
+</body>
+</html>
